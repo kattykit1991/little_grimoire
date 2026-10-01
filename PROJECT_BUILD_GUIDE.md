@@ -106,22 +106,28 @@ Was setzen wir in dieser Stage konkret zusammen?
 - [x] Vite-Startprojekt bereinigen
 - [x] Styling-Lösung einrichten
 - [x] DaisyUI als Komponenten-Library einrichten
-- [ ] Git Repository initialisieren
-- [ ] öffentliches GitHub Repository erstellen und verbinden
-- [ ] ersten Entwicklungs-Branch erstellen
-- [ ] Änderungen über einen Pull Request nach `main` mergen
-- [ ] Hosting einrichten
-- [ ] erste minimale Version deployen
+- [x] Git Repository initialisieren
+- [x] öffentliches GitHub Repository erstellen und verbinden
+- [x] Git-Workflow mit Instructor geklärt
+      → Soloprojekt: direktes Arbeiten auf `main` ist okay
+      → Pull Requests sind für dieses Projekt nicht erforderlich
+- [x] Hosting einrichten
+- [x] erste minimale Version deployen
+
+Deployment auf Cloudflare:
+
+- [grimoire.katcoded.de](https://grimoire.katcoded.de/)
+- [little-grimoire.pages.dev](https://little-grimoire.pages.dev/)
 
 ### ✅ FERTIG, WENN
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Die React-App startet lokal ohne Fehler.
-- [ ] Die gewählte Styling-/Komponenten-Lösung funktioniert.
-- [ ] Das Projekt liegt in einem öffentlichen GitHub Repository.
-- [ ] Der Branch-/Pull-Request-Workflow funktioniert.
-- [ ] Die App ist über eine öffentliche Deployment-URL erreichbar.
+- [x] Die React-App startet lokal ohne Fehler.
+- [x] Die gewählte Styling-/Komponenten-Lösung funktioniert.
+- [x] Das Projekt liegt in einem öffentlichen GitHub Repository.
+- [x] Der Git-Workflow ist mit dem Trainer geklärt: direktes Arbeiten auf `main`, keine Pull Requests erforderlich.
+- [x] Die App ist über eine öffentliche Deployment-URL erreichbar.
 
 ---
 
@@ -1383,7 +1389,7 @@ Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
 Was soll nach dieser Stage funktionieren?
 
-> Little Grimoire wird für die Abgabe fertiggestellt. Die vorhandenen Funktionen werden getestet, kleinere Fehler behoben und die Oberfläche konsistent und responsive gestaltet. Anschließend wird eine produktionsfertige Version erstellt, über den vorgesehenen Git-/Pull-Request-Workflow nach `main` übernommen und final deployed.
+> Little Grimoire wird für die Abgabe fertiggestellt. Die vorhandenen Funktionen werden getestet, kleinere Fehler behoben und die Oberfläche konsistent und responsive gestaltet. Anschließend wird eine produktionsfertige Version erstellt, direkt auf `main` committet und gepusht und final deployed.
 
 ### 🧱 CODE-BAUSTEINE
 
@@ -1523,7 +1529,7 @@ So lässt sich vor dem finalen Deployment prüfen, ob die gebaute Version weiter
 git status
 ```
 
-Vor Commit, Push oder Pull Request kann damit kontrolliert werden, welche Änderungen aktuell vorhanden sind.
+Vor Commit oder Push kann damit kontrolliert werden, welche Änderungen aktuell vorhanden sind.
 
 ---
 
@@ -1545,9 +1551,7 @@ Die fertigen Änderungen werden zur Staging Area hinzugefügt und anschließend 
 git push
 ```
 
-Die lokalen Commits werden zum verbundenen Remote Repository übertragen.
-
-Anschließend kann der Entwicklungs-Branch über einen Pull Request nach `main` übernommen werden.
+Die lokalen Commits auf `main` werden zum verbundenen Remote Repository übertragen. Für dieses Soloprojekt sind laut Absprache mit dem Trainer keine Pull Requests erforderlich.
 
 ### 🔨 BAUEN
 
@@ -1574,7 +1578,6 @@ Was setzen wir in dieser Stage konkret zusammen?
 - [ ] Produktions-Build erstellen
 - [ ] Produktions-Build lokal testen
 - [ ] finalen Entwicklungsstand committen und pushen
-- [ ] finalen Pull Request nach `main` erstellen und mergen
 - [ ] finale Version deployen
 - [ ] öffentliche Deployment-URL testen
 - [ ] README auf den tatsächlichen Projektstand aktualisieren
@@ -1592,7 +1595,7 @@ Woran erkennen wir konkret, dass diese Stage geschafft ist?
 - [ ] Die Browser-Konsole zeigt beim normalen Verwenden der App keine unbehandelten Fehler.
 - [ ] `npm run build` läuft erfolgreich durch.
 - [ ] Der Produktions-Build wurde vor dem Deployment getestet.
-- [ ] Der finale Stand wurde über einen Pull Request nach `main` übernommen.
+- [ ] Der finale Stand wurde direkt auf `main` committet und gepusht.
 - [ ] Das öffentliche GitHub Repository enthält den aktuellen Projektstand.
 - [ ] Die finale Deployment-Version ist über eine öffentliche URL erreichbar.
 - [ ] Die README beschreibt den tatsächlichen Stand von Little Grimoire.

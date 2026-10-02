@@ -4,55 +4,46 @@
 
 ## 🎯 CURRENT GOAL
 
-Woran arbeiten wir gerade?
-
-> Stage 02 · App-Grundgerüst ist abgeschlossen. Als Nächstes folgt Stage 03 · Habit Tracker.
+Stage 03 · Habit Tracker ist abgeschlossen. Stage 04 ist implementiert, zwei Browser-Prüfungen sind noch offen. Stage 05 · Habit Progress + Activity ist begonnen.
 
 ## 📍 CURRENT STATE
 
-Was funktioniert bereits?
-
-- Vite + React eingerichtet; Starttemplate bereinigt.
-- Eigenes Favicon eingebunden und nach Leeren des Browser-Caches sichtbar.
-- TailwindCSS und DaisyUI eingerichtet. Lokaler Start unter http://localhost:5173 und funktionierendes Styling von Kat bestätigt; Produktions-Build erfolgreich geprüft.
-- Öffentliches GitHub Repository: https://github.com/kattykit1991/little_grimoire. Erster Commit erfolgreich auf `main` gepusht.
-- Hosting und erstes Deployment auf Cloudflare abgeschlossen (von Kat bestätigt): https://grimoire.katcoded.de/ und https://little-grimoire.pages.dev/.
-- Stage 01 und Stage 02 im Build Guide vollständig abgehakt.
-- Hauptansichten unter `src/pages/`: Dashboard, Habits, DailyPlanner und Diary als getrennte, erkennbare Platzhalter-Komponenten.
-- Navigation unter `src/components/Navigation.jsx`; vier Buttons ändern über `onViewChange` den `currentView`-State in `App.jsx`.
-- Dashboard ist die Startansicht. Conditional Rendering zeigt jeweils genau die ausgewählte Hauptansicht.
-- Stage 02 von Kat im Browser getestet; Code geprüft, Produktions-Build und Lint erfolgreich. Feature-Logik ist noch nicht implementiert.
+- Stage 01 und Stage 02 abgeschlossen: React/Vite, TailwindCSS/DaisyUI, bereinigtes Starttemplate, eigenes Favicon und App-Grundgerüst.
+- Dashboard ist Startansicht; Navigation zwischen Dashboard, Habits, Diary und Daily Planner funktioniert (von Kat getestet).
+- Habit-State und Änderungsfunktionen liegen in `App.jsx`. `Formular`, `HabitList` und `HabitItem` sind über Props verbunden.
+- Habits enthalten ID, Name, Zielhäufigkeit und Counter. Anlegen, Listenanzeige und gezieltes Erhöhen/Verringern des Counters sind implementiert und von Kat im Browser bestätigt. Formularfelder werden nach Submit geleert.
+- Persistenz unter localStorage-Key `habits`: lazy State-Initialisierung lädt das gespeicherte Array oder startet mit `[]`; ein Effect speichert Änderungen. Erhalt eines Habits und eines veränderten Counters nach vollständigem Reload von Kat bestätigt.
+- Completed wird durch `counter >= Number(target)` abgeleitet und als „Completed ✨“ angezeigt; im Browser bestätigt.
+- Gesamtfortschritt und Activity History fehlen noch. Dashboard und Diary sind Platzhalter; Daily Planner enthält bisher nur eine UI-Probe, keine Planner-Funktionen.
+- Statuscheck am 2. Oktober 2026: Produktions-Build erfolgreich; Lint beendet sich erfolgreich mit zwei Warnungen zu ungenutzten Imports.
+- Öffentliches Repository: https://github.com/kattykit1991/little_grimoire.
+- Hosting und erstes Deployment auf Cloudflare zuvor von Kat bestätigt: https://grimoire.katcoded.de/ und https://little-grimoire.pages.dev/. Der aktuelle lokale Feature-Stand wurde in diesem Statuscheck nicht gepusht oder als deployed verifiziert.
 
 ## ➡️ NEXT STEP
 
-Was ist der konkrete nächste Schritt?
-
-> Stage 03 beginnen: überlegen, welche Daten ein Habit benötigt (Name, Zielhäufigkeit, aktueller Zähler und eindeutige ID). Danach State für die Habit-Liste anlegen und schrittweise Formular, Liste und einzelne Habit-Komponente aufbauen. Persistenz folgt erst in Stage 04.
+Zuerst die zwei offenen Stage-04-Prüfungen durchführen: mehrere Habits mit unterschiedlichen Namen, Zielen und Countern nach Reload vergleichen; Erststart ohne gespeicherten `habits`-Key in einem separaten Browserprofil prüfen. Danach Stage 05 fortsetzen: Anzahl abgeschlossener Habits berechnen, Gesamtzahl bestimmen und täglichen Gesamtfortschritt anzeigen. Anschließend datumsbezogene Activity History aufbauen und persistieren. Stage 06 folgt erst danach.
 
 ## 🐛 KNOWN PROBLEMS
 
-Was ist gerade kaputt, unklar oder nervig?
-
-- Keine bekannten aktuellen Blocker.
+- Keine bestätigten funktionalen Blocker. Erststart ohne gespeicherte Daten und Wiederherstellung mehrerer Habits sind noch nicht ausdrücklich im Browser bestätigt.
+- Ungültiges JSON im localStorage wird derzeit nicht abgefangen.
 
 ## 🐇 PARKED SIDEQUESTS
 
-Was ist uns eingefallen, gehört aber gerade nicht zum aktuellen Ziel?
-
-- Keine konkreten Sidequests festgehalten. Zusätzliche Features bleiben bis nach den Kernfunktionen geparkt.
+- Zusätzliche Features bleiben bis nach den Kernfunktionen geparkt.
 
 ## 🧹 CLEANUP LATER
 
-Was funktioniert, sollte später aber noch aufgeräumt/verbessert werden?
-
-- README bei weiteren Fortschritten an den tatsächlichen Funktionsumfang anpassen; die Kernfeatures und localStorage sind noch nicht implementiert.
-- Die Platzhalter verwenden bisher Text in `div`-Elementen. Beim Ausbau passende semantische Überschriften verwenden.
+- Ungenutzte Imports: `Formular` in `src/App.jsx`, `useState` in `src/pages/Habits.jsx` (Lint-Warnungen).
+- Formularvalidierung fehlt bisher; Ziel wird als String gespeichert. Counter kann unter null fallen. Keine Änderungen hierzu im Statuscheck vorgenommen.
+- Platzhalter durch passende semantische Überschriften ersetzen; UI-Probe im Daily Planner beim Ausbau entfernen.
+- README an den tatsächlichen Funktionsumfang anpassen.
 
 ## 🧠 IMPORTANT CONTEXT
 
-Was darf Future Kat beim Wiedereinstieg nicht vergessen?
-
-- Savepoint: 2. Oktober 2026, nach Abschluss von Stage 02.
-- Mit dem Instructor geklärt: Für dieses Soloprojekt direkt auf `main` arbeiten; Entwicklungs-Branches und Pull Requests sind nicht erforderlich.
-- Kat schreibt den Application Code. Nabi unterstützt Planung, Erklärung, Prüfung, Git-Workflow und Dokumentation.
-- Der konkrete Bauplan steht in `PROJECT_BUILD_GUIDE.md`; beim Wiedereinstieg mit dem ersten offenen Punkt von Stage 03 fortfahren.
+- Savepoint: 2. Oktober 2026, nach Statuscheck von Stage 03–05.
+- Grundlage: vorhandener Code plus Kats ausdrücklich bestätigte Browser-Tests. Keine eigenen Browser-Tests in diesem Check.
+- Stage 03 erlaubt noch Datenverlust nach Reload; Persistenz ist bereits vorhanden und verhindert den Abschluss von Stage 03 nicht.
+- Instructor-Absprachen: direkt auf `main` arbeiten; keine Entwicklungs-Branches oder Pull Requests erforderlich.
+- Kat schreibt den App-Code. Nabi unterstützt Planung, Erklärung, Prüfung, Git und Dokumentation.
+- Nur Build Guide und Savepoint wurden im Statuscheck bearbeitet. Aktuelle App-Änderungen sind noch uncommittet; letzter zuvor gesicherter Zwischenstand war `aa2f713`.

@@ -432,31 +432,31 @@ Dieses Muster erstellt ein neues Array und verändert darin nur den passenden Ei
 
 Was setzen wir in dieser Stage konkret zusammen?
 
-- [ ] überlegen, welche Daten ein Habit für diese Stage benötigt
-- [ ] State für die Habit-Liste anlegen
-- [ ] Formular-Komponente für neue Habits erstellen
-- [ ] kontrollierte Eingabefelder für Name und Zielhäufigkeit verwenden
-- [ ] aus den Formulardaten ein neues Habit erzeugen
-- [ ] neues Habit zur Habit-Liste hinzufügen
-- [ ] Listen-Komponente für die Habits erstellen
-- [ ] einzelne Habit-Komponente erstellen
-- [ ] Habit-Liste mit `.map()` anzeigen
-- [ ] aktuellen Zähler eines Habits anzeigen
-- [ ] Zähler eines einzelnen Habits erhöhen können
-- [ ] Zähler eines einzelnen Habits verringern können
+- [x] überlegen, welche Daten ein Habit für diese Stage benötigt
+- [x] State für die Habit-Liste anlegen
+- [x] Formular-Komponente für neue Habits erstellen
+- [x] kontrollierte Eingabefelder für Name und Zielhäufigkeit verwenden
+- [x] aus den Formulardaten ein neues Habit erzeugen
+- [x] neues Habit zur Habit-Liste hinzufügen
+- [x] Listen-Komponente für die Habits erstellen
+- [x] einzelne Habit-Komponente erstellen
+- [x] Habit-Liste mit `.map()` anzeigen
+- [x] aktuellen Zähler eines Habits anzeigen
+- [x] Zähler eines einzelnen Habits erhöhen können
+- [x] Zähler eines einzelnen Habits verringern können
 
 ### ✅ FERTIG, WENN
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Ein neues Habit kann mit eigenem Namen angelegt werden.
-- [ ] Für ein Habit kann eine Zielhäufigkeit festgelegt werden.
-- [ ] Mehrere Habits können gleichzeitig angezeigt werden.
-- [ ] Jedes Habit zeigt seinen aktuellen Zähler und sein Ziel an.
-- [ ] Der Zähler eines einzelnen Habits kann erhöht werden.
-- [ ] Der Zähler eines einzelnen Habits kann verringert werden.
-- [ ] Änderungen an einem Habit verändern nicht versehentlich andere Habits.
-- [ ] Nach einem Neuladen dürfen die Daten in dieser Stage noch verschwinden.
+- [x] Ein neues Habit kann mit eigenem Namen angelegt werden.
+- [x] Für ein Habit kann eine Zielhäufigkeit festgelegt werden.
+- [x] Mehrere Habits können gleichzeitig angezeigt werden.
+- [x] Jedes Habit zeigt seinen aktuellen Zähler und sein Ziel an.
+- [x] Der Zähler eines einzelnen Habits kann erhöht werden.
+- [x] Der Zähler eines einzelnen Habits kann verringert werden.
+- [x] Änderungen an einem Habit verändern nicht versehentlich andere Habits.
+- [x] Nach einem Neuladen dürfen die Daten in dieser Stage noch verschwinden.
 
 ## STAGE 04 · Persistenz / localStorage
 
@@ -598,24 +598,24 @@ Wenn sich `value` verändert:
 
 Was setzen wir in dieser Stage konkret zusammen?
 
-- [ ] einen eindeutigen localStorage-Key für die Habit-Daten festlegen
-- [ ] prüfen, ob beim Start bereits gespeicherte Habit-Daten existieren
-- [ ] vorhandene Habit-Daten beim Start laden
-- [ ] ohne gespeicherte Daten mit einer leeren Habit-Liste starten
-- [ ] Änderungen an der Habit-Liste im localStorage speichern
-- [ ] prüfen, ob neu angelegte Habits nach einem Reload erhalten bleiben
-- [ ] prüfen, ob veränderte Habit-Zähler nach einem Reload erhalten bleiben
+- [x] einen eindeutigen localStorage-Key für die Habit-Daten festlegen
+- [x] prüfen, ob beim Start bereits gespeicherte Habit-Daten existieren
+- [x] vorhandene Habit-Daten beim Start laden
+- [x] ohne gespeicherte Daten mit einer leeren Habit-Liste starten
+- [x] Änderungen an der Habit-Liste im localStorage speichern
+- [x] prüfen, ob neu angelegte Habits nach einem Reload erhalten bleiben
+- [x] prüfen, ob veränderte Habit-Zähler nach einem Reload erhalten bleiben
 
 ### ✅ FERTIG, WENN
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Habits bleiben nach einem Neuladen der Seite erhalten.
-- [ ] Name und Zielhäufigkeit eines Habits bleiben erhalten.
-- [ ] Der aktuelle Zähler eines Habits bleibt erhalten.
-- [ ] Mehrere Habits werden vollständig wiederhergestellt.
-- [ ] Beim ersten Start ohne gespeicherte Daten funktioniert die App weiterhin ohne Fehler.
-- [ ] Änderungen am Habit-State werden automatisch im localStorage gespeichert.
+- [x] Habits bleiben nach einem Neuladen der Seite erhalten.
+- [x] Name und Zielhäufigkeit eines Habits bleiben erhalten.
+- [x] Der aktuelle Zähler eines Habits bleibt erhalten.
+- [x] Mehrere Habits werden vollständig wiederhergestellt.
+- [x] Beim ersten Start ohne gespeicherte Daten funktioniert die App weiterhin ohne Fehler.
+- [x] Änderungen am Habit-State werden automatisch im localStorage gespeichert.
 
 ## STAGE 05 · Habit Progress + Activity
 
@@ -789,8 +789,8 @@ Dadurch kann die Darstellung später abhängig von verschiedenen Fortschrittsstu
 
 Was setzen wir in dieser Stage konkret zusammen?
 
-- [ ] erkennen, ob ein einzelnes Habit sein Tagesziel erreicht hat
-- [ ] Darstellung eines abgeschlossenen Habits sichtbar verändern
+- [x] erkennen, ob ein einzelnes Habit sein Tagesziel erreicht hat
+- [x] Darstellung eines abgeschlossenen Habits sichtbar verändern
 - [ ] Anzahl der abgeschlossenen Habits berechnen
 - [ ] Gesamtzahl der Habits bestimmen
 - [ ] täglichen Gesamtfortschritt anzeigen
@@ -805,8 +805,8 @@ Was setzen wir in dieser Stage konkret zusammen?
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Ein Habit wird als abgeschlossen erkannt, sobald sein Ziel erreicht oder überschritten wurde.
-- [ ] Abgeschlossene Habits unterscheiden sich sichtbar von noch offenen Habits.
+- [x] Ein Habit wird als abgeschlossen erkannt, sobald sein Ziel erreicht oder überschritten wurde.
+- [x] Abgeschlossene Habits unterscheiden sich sichtbar von noch offenen Habits.
 - [ ] Der Gesamtfortschritt des aktuellen Tages wird angezeigt.
 - [ ] Der Tagesfortschritt kann als Verhältnis von abgeschlossenen zu vorhandenen Habits bestimmt werden.
 - [ ] Der Fortschritt eines Tages wird unter dem passenden Datum gespeichert.

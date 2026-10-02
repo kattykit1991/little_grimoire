@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Formular() {
+function Formular({ addHabit }) {
   const [habitName, setHabitName] = useState("");
   const [habitTarget, setHabitTarget] = useState("");
 
@@ -12,6 +12,9 @@ function Formular() {
       target: habitTarget,
       counter: 0,
     };
+    addHabit(habit);
+    setHabitName("");
+    setHabitTarget("");
   }
 
   return (

@@ -252,29 +252,44 @@ Dieses Muster kann mehrfach mit unterschiedlichen Bedingungen verwendet werden.
 
 Was setzen wir in dieser Stage konkret zusammen?
 
-- [ ] sinnvolle Ordnerstruktur für die Hauptbereiche anlegen
-- [ ] Komponente für die Navigation erstellen
-- [ ] Komponente für das Dashboard erstellen
-- [ ] Komponente für den Habit-Bereich erstellen
-- [ ] Komponente für den Daily Planner erstellen
-- [ ] Komponente für den Diary-Bereich erstellen
-- [ ] Hauptbereiche in die App einbinden
-- [ ] Dashboard als Startansicht festlegen
-- [ ] State für die aktuell ausgewählte Ansicht verwenden
-- [ ] Navigation mit diesem State verbinden
-- [ ] abhängig von der ausgewählten Ansicht den passenden Bereich anzeigen
-- [ ] vorübergehende Platzhalter verwenden, damit jede Ansicht eindeutig erkennbar ist
+Die Hauptbereiche werden in dieser Stage nur als erkennbare Platzhalter aufgebaut. Ihre eigentlichen Funktionen folgen in den späteren Stages. Ordner und Dateien entstehen erst beim jeweiligen Schritt; zukünftige Formulare, Listen und andere Feature-Komponenten müssen noch nicht angelegt werden.
+
+**1. Mit einer Ansicht beginnen**
+
+- [x] Ablage für Hauptansichten und gemeinsame UI-Komponenten überlegen
+- [x] Dashboard-Komponente mit einer einfachen Überschrift erstellen; den benötigten Ordner dabei anlegen
+- [x] Dashboard in `App.jsx` importieren und anzeigen
+- [x] im Browser prüfen, ob der Dashboard-Platzhalter erscheint
+
+**2. Die übrigen Ansichten vorbereiten**
+
+- [x] Habit-Bereich als eigene Komponente mit einer einfachen Überschrift erstellen
+- [x] Daily Planner als eigene Komponente mit einer einfachen Überschrift erstellen
+- [x] Diary-Bereich als eigene Komponente mit einer einfachen Überschrift erstellen
+
+**3. Den Ansichtswechsel aufbauen**
+
+- [x] State für die ausgewählte Ansicht in `App.jsx` anlegen; Dashboard als Startwert verwenden
+- [x] Hauptansichten importieren und abhängig vom State genau eine davon anzeigen
+- [x] Navigation-Komponente mit Buttons für die vier Hauptansichten erstellen; den benötigten Ordner dabei anlegen
+- [x] Navigation in `App.jsx` einbinden und ihr eine Funktion zum Wechseln der Ansicht übergeben
+- [x] Klicks auf die Navigationsbuttons mit dieser Funktion verbinden
+
+**4. Das Grundgerüst prüfen**
+
+- [x] prüfen, ob beim Start das Dashboard angezeigt wird
+- [x] alle Navigationsbuttons ausprobieren und prüfen, ob jeweils nur die passende Ansicht erscheint
 
 ### ✅ FERTIG, WENN
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Die App startet ohne Fehler.
-- [ ] Das Dashboard wird beim Start der App angezeigt.
-- [ ] Dashboard, Habits, Daily Planner und Diary existieren als getrennte Komponenten.
-- [ ] Alle Hauptbereiche sind über die Navigation erreichbar.
-- [ ] Beim Wechsel der Navigation wird nur der ausgewählte Hauptbereich angezeigt.
-- [ ] Die einzelnen Bereiche benötigen noch keine Feature-Logik.
+- [x] Die App startet ohne Fehler.
+- [x] Das Dashboard wird beim Start der App angezeigt.
+- [x] Dashboard, Habits, Daily Planner und Diary existieren als getrennte Komponenten.
+- [x] Alle Hauptbereiche sind über die Navigation erreichbar.
+- [x] Beim Wechsel der Navigation wird nur der ausgewählte Hauptbereich angezeigt.
+- [x] Die einzelnen Bereiche benötigen noch keine Feature-Logik.
 
 ## STAGE 03 · Habit Tracker
 

@@ -785,21 +785,23 @@ Berechnete Werte können als Attribute oder Props an Elemente weitergegeben werd
 
 Dadurch kann die Darstellung später abhängig von verschiedenen Fortschrittsstufen gestaltet werden.
 
+> Statuscheck: teilweise / V0.1. Completed und Gesamtfortschritt funktionieren. Die Heatmap zeigt 35 Positionen; nur die letzte Position („Today“) nutzt echte Habit-Daten und unterschiedliche Fortschrittsstufen. Die übrigen Felder sind Platzhalter, keine gespeicherte History. Keine Datumsschlüssel, kein Tageswechsel/Counter-Reset und keine persistente historische Activity. Eine 365-Tage-History ist ebenfalls nicht vorhanden.
+
 ### 🔨 BAUEN
 
 Was setzen wir in dieser Stage konkret zusammen?
 
 - [x] erkennen, ob ein einzelnes Habit sein Tagesziel erreicht hat
 - [x] Darstellung eines abgeschlossenen Habits sichtbar verändern
-- [ ] Anzahl der abgeschlossenen Habits berechnen
-- [ ] Gesamtzahl der Habits bestimmen
-- [ ] täglichen Gesamtfortschritt anzeigen
+- [x] Anzahl der abgeschlossenen Habits berechnen
+- [x] Gesamtzahl der Habits bestimmen
+- [x] täglichen Gesamtfortschritt anzeigen
 - [ ] überlegen, welche Zusammenfassung eines Tages für die Activity History gespeichert werden muss
 - [ ] Tagesfortschritt einem eindeutigen Datum zuordnen
 - [ ] Activity History dauerhaft speichern
 - [ ] vorhandene Activity History beim Start laden
 - [ ] Activity-Übersicht aus den gespeicherten Tagesdaten erzeugen
-- [ ] unterschiedliche Fortschrittsstufen in der Activity sichtbar darstellen
+- [x] unterschiedliche Fortschrittsstufen in der Activity sichtbar darstellen
 
 ### ✅ FERTIG, WENN
 
@@ -807,12 +809,12 @@ Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
 - [x] Ein Habit wird als abgeschlossen erkannt, sobald sein Ziel erreicht oder überschritten wurde.
 - [x] Abgeschlossene Habits unterscheiden sich sichtbar von noch offenen Habits.
-- [ ] Der Gesamtfortschritt des aktuellen Tages wird angezeigt.
-- [ ] Der Tagesfortschritt kann als Verhältnis von abgeschlossenen zu vorhandenen Habits bestimmt werden.
+- [x] Der Gesamtfortschritt des aktuellen Tages wird angezeigt.
+- [x] Der Tagesfortschritt kann als Verhältnis von abgeschlossenen zu vorhandenen Habits bestimmt werden.
 - [ ] Der Fortschritt eines Tages wird unter dem passenden Datum gespeichert.
 - [ ] Bereits gespeicherte Tage bleiben nach einem Neuladen erhalten.
 - [ ] Mehrere Tage können in der Activity History dargestellt werden.
-- [ ] Unterschiedliche Fortschrittsstufen sind in der Activity-Übersicht visuell unterscheidbar.
+- [x] Unterschiedliche Fortschrittsstufen sind in der Activity-Übersicht visuell unterscheidbar.
 
 ## STAGE 06 · Daily Planner
 
@@ -996,6 +998,8 @@ const value = storedValue ? JSON.parse(storedValue) : fallbackValue;
 
 Diese bereits bekannten Muster können für einen weiteren dauerhaft gespeicherten Datenbereich wiederverwendet werden.
 
+> Statuscheck: teilweise / V0.1. Focus, To-dos und Notes sind bearbeitbar und persistent, jedoch eine einzige Sammlung ohne Datumszuordnung. To-dos können noch nicht abgehakt oder entfernt werden. Kriterien für einen ausgewählten Tag bleiben daher offen.
+
 ### 🔨 BAUEN
 
 Was setzen wir in dieser Stage konkret zusammen?
@@ -1006,17 +1010,17 @@ Was setzen wir in dieser Stage konkret zusammen?
 - [ ] beim Öffnen des Planners den aktuellen Tag anzeigen
 - [ ] Möglichkeit zum Wechseln des ausgewählten Tages einbauen
 - [ ] ausgewähltes Datum sichtbar anzeigen
-- [ ] Bereich für Today's Focus erstellen
+- [x] Bereich für Today's Focus erstellen
 - [ ] Today's Focus für den ausgewählten Tag bearbeiten können
-- [ ] To-do-Bereich erstellen
-- [ ] neue To-dos hinzufügen können
+- [x] To-do-Bereich erstellen
+- [x] neue To-dos hinzufügen können
 - [ ] einzelne To-dos als erledigt bzw. offen markieren können
 - [ ] einzelne To-dos entfernen können
-- [ ] Bereich für Little Notes erstellen
+- [x] Bereich für Little Notes erstellen
 - [ ] Little Notes für den ausgewählten Tag bearbeiten können
 - [ ] Planner-Daten getrennt nach Datum speichern
-- [ ] Planner-Daten im localStorage speichern
-- [ ] vorhandene Planner-Daten beim Start wieder laden
+- [x] Planner-Daten im localStorage speichern
+- [x] vorhandene Planner-Daten beim Start wieder laden
 
 ### ✅ FERTIG, WENN
 
@@ -1030,7 +1034,7 @@ Woran erkennen wir konkret, dass diese Stage geschafft ist?
 - [ ] Jeder Tag besitzt eigene Little Notes.
 - [ ] Inhalte verschiedener Tage überschreiben sich nicht gegenseitig.
 - [ ] Beim Wechsel zwischen Tagen erscheinen die jeweils passenden Inhalte.
-- [ ] Planner-Daten bleiben nach einem Neuladen der App erhalten.
+- [x] Planner-Daten bleiben nach einem Neuladen der App erhalten.
 
 ## STAGE 07 · Diary
 
@@ -1210,28 +1214,30 @@ const value = storedValue ? JSON.parse(storedValue) : fallbackValue;
 
 Das bekannte localStorage-Muster kann auch für einen weiteren Datenbereich der App verwendet werden.
 
+> Statuscheck: teilweise / V0.1. Inline-Formular, kontrollierte Felder, Pflichtfeldprüfung, Karten und Persistenz vorhanden; Formularreset von Kat bestätigt. Kein Creation-/Detail-Modal und keine Eintrag-pro-Tag-Prüfung. Neu angelegte Einträge stehen vorne, aber es gibt keine Sortierung nach Eintragsdatum; das newest-first-Kriterium bleibt offen. Standarddatum und Reset verwenden UTC (`toISOString`), nicht ausdrücklich das lokale Kalenderdatum. Editieren fehlt ebenfalls, ist aber kein eigenes Kriterium dieser Stage.
+
 ### 🔨 BAUEN
 
 Was setzen wir in dieser Stage konkret zusammen?
 
-- [ ] überlegen, welche Daten ein Diary-Eintrag benötigt
-- [ ] State für die Diary-Einträge anlegen
+- [x] überlegen, welche Daten ein Diary-Eintrag benötigt
+- [x] State für die Diary-Einträge anlegen
 - [ ] Button zum Erstellen eines neuen Eintrags hinzufügen
 - [ ] Modal zum Erstellen eines Eintrags bauen
-- [ ] kontrollierte Eingabefelder für Titel, Datum, Bild-URL und Inhalt verwenden
-- [ ] prüfen, ob alle benötigten Felder ausgefüllt sind
+- [x] kontrollierte Eingabefelder für Titel, Datum, Bild-URL und Inhalt verwenden
+- [x] prüfen, ob alle benötigten Felder ausgefüllt sind
 - [ ] prüfen, ob für das gewählte Datum bereits ein Eintrag existiert
-- [ ] gültigen Diary-Eintrag zur Sammlung hinzufügen
+- [x] gültigen Diary-Eintrag zur Sammlung hinzufügen
 - [ ] Creation Modal nach erfolgreichem Speichern schließen
 - [ ] gespeicherte Diary-Einträge mit dem neuesten Eintrag zuerst anzeigen
-- [ ] Kartenansicht für einzelne Diary-Einträge erstellen
-- [ ] auf einer Karte mindestens Bild, Datum und Titel anzeigen
+- [x] Kartenansicht für einzelne Diary-Einträge erstellen
+- [x] auf einer Karte mindestens Bild, Datum und Titel anzeigen
 - [ ] angeklickten Diary-Eintrag als ausgewählten Eintrag speichern
 - [ ] Detail-Modal für einen ausgewählten Eintrag erstellen
 - [ ] im Detail-Modal den vollständigen Diary-Eintrag anzeigen
 - [ ] Detail-Modal wieder schließen können
-- [ ] Diary-Einträge im localStorage speichern
-- [ ] vorhandene Diary-Einträge beim Start wieder laden
+- [x] Diary-Einträge im localStorage speichern
+- [x] vorhandene Diary-Einträge beim Start wieder laden
 
 ### ✅ FERTIG, WENN
 
@@ -1239,14 +1245,14 @@ Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
 - [ ] Über einen Button kann ein neuer Diary-Eintrag begonnen werden.
 - [ ] Das Erstellen findet in einem Modal statt.
-- [ ] Ein Eintrag enthält Titel, Datum, Bild-URL und Inhalt.
-- [ ] Ein Eintrag kann nur gespeichert werden, wenn alle benötigten Felder ausgefüllt sind.
+- [x] Ein Eintrag enthält Titel, Datum, Bild-URL und Inhalt.
+- [x] Ein Eintrag kann nur gespeichert werden, wenn alle benötigten Felder ausgefüllt sind.
 - [ ] Für denselben Kalendertag kann kein zweiter Eintrag angelegt werden.
 - [ ] Gespeicherte Einträge erscheinen mit dem neuesten Eintrag zuerst.
-- [ ] Eine Diary-Karte zeigt Bild, Datum und Titel.
+- [x] Eine Diary-Karte zeigt Bild, Datum und Titel.
 - [ ] Durch Anklicken einer Karte kann der vollständige Eintrag geöffnet werden.
 - [ ] Die Detailansicht kann wieder geschlossen werden.
-- [ ] Diary-Einträge bleiben nach einem Neuladen der App erhalten.
+- [x] Diary-Einträge bleiben nach einem Neuladen der App erhalten.
 
 ## STAGE 08 · Dashboard mit echten Daten
 
@@ -1367,6 +1373,8 @@ const displayValue = `${current} / ${total}`;
 
 Bereits vorhandene Daten können für die Benutzeroberfläche in eine leichter lesbare Form gebracht werden, ohne die ursprünglichen Daten zu verändern.
 
+> Statuscheck: teilweise / V0.1. Dashboard erhält denselben Habit-State aus App und zeigt echten Fortschritt. Planner und Diary bleiben Teaser ohne echte Tagesdaten; ihr State liegt lokal in den Pages. Gemeinsame Datenversorgung aller Bereiche und entsprechende Gesamtkriterien bleiben offen. Vor der Präsentation ist kein weiteres State-Lifting vorgesehen.
+
 ### 🔨 BAUEN
 
 Was setzen wir in dieser Stage konkret zusammen?
@@ -1377,8 +1385,8 @@ Was setzen wir in dieser Stage konkret zusammen?
 - [ ] aktuelles Datum auf dem Dashboard anzeigen
 - [ ] Today's Focus des aktuellen Tages aus dem Daily Planner anzeigen
 - [ ] heutige To-dos bzw. eine kompakte To-do-Zusammenfassung anzeigen
-- [ ] aktuellen Habit-Fortschritt anzeigen
-- [ ] Anzahl abgeschlossener und vorhandener Habits anzeigen
+- [x] aktuellen Habit-Fortschritt anzeigen
+- [x] Anzahl abgeschlossener und vorhandener Habits anzeigen
 - [ ] vorhandenen Diary-Eintrag des aktuellen Tages finden
 - [ ] bei vorhandenem Diary-Eintrag eine kompakte Vorschau anzeigen
 - [ ] sinnvolle Empty States anzeigen, wenn für einen Bereich heute noch keine Daten existieren
@@ -1388,12 +1396,12 @@ Was setzen wir in dieser Stage konkret zusammen?
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
-- [ ] Das Dashboard ist weiterhin die Startansicht der App.
+- [x] Das Dashboard ist weiterhin die Startansicht der App.
 - [ ] Das aktuelle Datum wird angezeigt.
 - [ ] Der Today's Focus des aktuellen Tages wird aus den vorhandenen Planner-Daten angezeigt.
 - [ ] Die heutigen To-dos werden kompakt zusammengefasst.
-- [ ] Der aktuelle Habit-Fortschritt wird angezeigt.
-- [ ] Das Dashboard zeigt, wie viele Habits bereits abgeschlossen sind.
+- [x] Der aktuelle Habit-Fortschritt wird angezeigt.
+- [x] Das Dashboard zeigt, wie viele Habits bereits abgeschlossen sind.
 - [ ] Ein vorhandener Diary-Eintrag des aktuellen Tages kann auf dem Dashboard zusammengefasst werden.
 - [ ] Fehlende Tagesdaten führen nicht zu Fehlern und werden sinnvoll dargestellt.
 - [ ] Änderungen in den jeweiligen Bereichen werden auch auf dem Dashboard sichtbar, ohne dieselben Daten separat pflegen zu müssen.
@@ -1568,49 +1576,51 @@ git push
 
 Die lokalen Commits auf `main` werden zum verbundenen Remote Repository übertragen. Für dieses Soloprojekt sind laut Absprache mit dem Trainer keine Pull Requests erforderlich.
 
+> Statuscheck: nicht abgeschlossen. Build und bestätigte Reload-Prüfungen sind abgehakt. Lint: drei Warnungen zu ungenutzten Imports/Variablen. Kein Preview-/Deployment-Test dieses lokalen Savepoints; Styling und visuelle Vereinheitlichung sind umgesetzt und von Kat im Browser geprüft; der heutige V0.1-Stand ist bewusst abgeschlossen. Umfassende Validierung, Accessibility sowie gesonderte Mobile-/Produktions-Preview-Prüfungen bleiben offen. Die ursprünglichen vollständigen Stage-Kriterien bleiben weiterhin gültig. Commit-/Push-Kriterien werden hier vor Ausführung nicht vorab abgehakt; das Ergebnis folgt im Abschlussbericht.
+
 ### 🔨 BAUEN
 
 Was setzen wir in dieser Stage konkret zusammen?
 
 - [ ] alle Hauptbereiche der App einmal vollständig durchtesten
-- [ ] Habit Tracker mit mehreren Habits testen
+- [x] Habit Tracker mit mehreren Habits testen
 - [ ] Habit Progress und Activity History testen
 - [ ] Daily Planner mit mehreren verschiedenen Tagen testen
 - [ ] Diary mit mehreren Einträgen und unterschiedlichen Daten testen
 - [ ] Dashboard mit vorhandenen und fehlenden Tagesdaten testen
-- [ ] Reload testen und prüfen, ob gespeicherte Daten erhalten bleiben
+- [x] Reload testen und prüfen, ob gespeicherte Daten erhalten bleiben
 - [ ] Formulare mit gültigen und ungültigen Eingaben testen
 - [ ] Empty States für Bereiche ohne vorhandene Daten prüfen
 - [ ] sichtbare Bugs beheben
 - [ ] Navigation und Bedienung auf Verständlichkeit prüfen
-- [ ] Styling der Hauptbereiche vereinheitlichen
-- [ ] Abstände, Größen und wiederkehrende UI-Elemente konsistent gestalten
+- [x] Styling der Hauptbereiche vereinheitlichen
+- [x] Abstände, Größen und wiederkehrende UI-Elemente konsistent gestalten
 - [ ] Layout auf kleineren Bildschirmgrößen prüfen
 - [ ] Layout auf größeren Bildschirmgrößen prüfen
 - [ ] offensichtliche Accessibility-Grundlagen prüfen
 - [ ] unnötige Platzhalter und nicht mehr benötigten Test-Code entfernen
 - [ ] Browser-Konsole auf Fehler prüfen
-- [ ] Produktions-Build erstellen
+- [x] Produktions-Build erstellen
 - [ ] Produktions-Build lokal testen
 - [ ] finalen Entwicklungsstand committen und pushen
 - [ ] finale Version deployen
 - [ ] öffentliche Deployment-URL testen
-- [ ] README auf den tatsächlichen Projektstand aktualisieren
+- [x] README auf den tatsächlichen Projektstand aktualisieren
 
 ### ✅ FERTIG, WENN
 
 Woran erkennen wir konkret, dass diese Stage geschafft ist?
 
 - [ ] Dashboard, Habits, Daily Planner und Diary funktionieren ohne bekannte kritische Fehler.
-- [ ] Gespeicherte Daten bleiben nach einem Reload erhalten.
+- [x] Gespeicherte Daten bleiben nach einem Reload erhalten.
 - [ ] Die App funktioniert auch mit leeren bzw. noch nicht vorhandenen Daten.
 - [ ] Die wichtigsten Eingaben werden sinnvoll validiert.
-- [ ] Die Oberfläche wirkt visuell zusammengehörig.
+- [x] Die Oberfläche wirkt visuell zusammengehörig.
 - [ ] Die App ist auf kleinen und größeren Bildschirmgrößen sinnvoll benutzbar.
 - [ ] Die Browser-Konsole zeigt beim normalen Verwenden der App keine unbehandelten Fehler.
-- [ ] `npm run build` läuft erfolgreich durch.
+- [x] `npm run build` läuft erfolgreich durch.
 - [ ] Der Produktions-Build wurde vor dem Deployment getestet.
 - [ ] Der finale Stand wurde direkt auf `main` committet und gepusht.
 - [ ] Das öffentliche GitHub Repository enthält den aktuellen Projektstand.
 - [ ] Die finale Deployment-Version ist über eine öffentliche URL erreichbar.
-- [ ] Die README beschreibt den tatsächlichen Stand von Little Grimoire.
+- [x] Die README beschreibt den tatsächlichen Stand von Little Grimoire.

@@ -1,5 +1,7 @@
-function Habits() {
-  return <div>Hier entsteht der Habit Tracker</div>;
+import { useState } from "react";
+
+function Habits({ habits }) {
+  return <div></div>;
 }
 
 export default Habits;

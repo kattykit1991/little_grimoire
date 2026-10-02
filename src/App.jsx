@@ -8,6 +8,12 @@ import Navigation from "./components/Navigation";
 function App() {
   // merkt sich wo userblerps grad draufguckt
   const [currentView, setCurrentView] = useState("dashboard");
+  const [habits, setHabits] = useState([]);
+
+  // WIESO HIER REIN?!?!
+  function addHabit(newHabit) {
+    setHabits((currentHabits) => [...currentHabits, newHabit]);
+  }
 
   return (
     <div>
@@ -15,7 +21,7 @@ function App() {
       <Navigation onViewChange={setCurrentView} />
       {/* guckt was in currentView steht und zeigt nur die passende page */}
       {currentView === "dashboard" && <Dashboard />}
-      {currentView === "habits" && <Habits />}
+      {currentView === "habits" && <Habits habits={habits} />}
       {currentView === "diary" && <Diary />}
       {currentView === "dailyPlanner" && <DailyPlanner />}
     </div>
